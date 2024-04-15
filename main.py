@@ -2,7 +2,7 @@ import create
 print('Bem vindo ao Sistema de AFNS e AFDS')
 
 while 1:
-    print(" 1. Criar um AFD ou AFN "
+    print(" 1. Criar e Testar "
       " 2. Converter um AFN -> AFD "
       " 3. Minimizar um AFD "
       " 4. Sair ")
