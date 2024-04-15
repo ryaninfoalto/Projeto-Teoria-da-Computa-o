@@ -34,9 +34,9 @@ def create_afnafd():
                     estado_prox = input()
                     
                     if estado_prox == '-': #if para tratar casos onde um estado não atende um simbolo
-                        delta[{estado, simbolo}] = None 
+                        delta[(estado, simbolo)] = None 
                     else:
-                        delta[{estado, simbolo}] = estado_prox #armazenando o automato
+                        delta[(estado, simbolo)] = estado_prox #armazenando o automato
             return
         if op_create == 2:
             print("Criando um AFN", end="\n")
@@ -52,20 +52,11 @@ def create_afnafd():
 
             print('Informe o(s) estado(s) finai(s): ', end="")
             estados_finais = input().split()
-            for estado in estados:
-                for simbolo in alfabeto:
-                    print(f"\t {simbolo}")
-                    print(f"{estado}\t------>\t", end="")
-                    estado_prox = input()
-                    
-                    if estado_prox == '-': #if para tratar casos onde um estado não atende um simbolo
-                        delta[{estado, simbolo}] = None 
-                    else:
-                        delta[{estado, simbolo}] = estado_prox #armazenando o automatod
+            
             return
         elif op_create == 3:
             print("Testando linguagens", end="\n")
-            
+
         elif op_create == 4:
             return
         
